@@ -1,0 +1,7 @@
+colorama
+cursor
+pytz
+requests
+beautifulsoup4
+openpyxl
+tqdm

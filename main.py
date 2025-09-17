@@ -20,7 +20,6 @@ from colorama import Fore
 from openpyxl import Workbook
 from openpyxl.styles import Font
 from tqdm import tqdm
-from winsound import MessageBeep, MB_OK, MB_ICONHAND
 
 colorama.init(autoreset=True)
 current_data_time = datetime.datetime.now().strftime("%d_%m_%Y_%H_%M")
@@ -185,7 +184,7 @@ def print_ln(message, tab_type='…', start_ln='\n', end_ln='\n', color=Fore.WHI
             len(message) % 2) + tab_type * tab_len, end=end_ln)
 
 
-def beep(times=1, b_type=MB_OK):
+def beep(times=1, b_type=0):
     """Sound notifications"""
     for _ in range(times):
         MessageBeep(b_type)
